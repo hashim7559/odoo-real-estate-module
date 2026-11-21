@@ -1,0 +1,55 @@
+<?xml version="1.0" ?>
+    <odoo>
+        <record id="estate_propery_type_action" model="ir.actions.act_window">
+            <field name="name">Property type</field>
+            <field name="res_model">estate.property.type</field>
+            <field name="view_mode">list,form</field>
+        </record>
+
+
+            <record id="estate_property_type_form" model="ir.ui.view">
+                <field name="name">estate.property.type</field>
+                <field name="model">estate.property.type</field>
+                <field name="arch" type="xml">
+
+                    <form>
+                        <sheet>
+                            <div class="oe_button_box" name="button_box">
+                                    <button name="%(estate_property_offer_count_action)d" type="action"  icon="payments" class="oe_stat_button">
+                                    <field name="offer_count" widget="statinfo" string='offers'/>
+                                </button>
+                            </div>
+                            <field name="name"/>
+
+                            <notebook>
+                                <page name="propertice">
+                                    <group>
+                                        <field name="property_name" string=' '>
+                                           <list>
+                                                <field name="name" string="Title"/>
+                                                <field name="expected_price"/>
+                                               <field name="state"/>
+                                           </list>
+                                        </field>
+                                    </group>
+                                </page>
+                            </notebook>
+                        </sheet>
+
+                    </form>
+                </field>
+
+             </record>
+        <record id="estate_property_type_list" model="ir.ui.view">
+            <field name="name">estate.property.type</field>
+            <field name="model">estate.property.type</field>
+            <field name="arch" type="xml" >
+                <list>
+                    <field name="sequence" widget="handle"/>
+                    <field name="name"/>
+                    <field name="id"/>
+
+                </list>
+            </field>
+        </record>
+    </odoo>

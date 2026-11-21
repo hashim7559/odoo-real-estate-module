@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<odoo>
+    <menuitem id="estate_menu_root" name="Estate">
+        <menuitem id="propertice" name="Propertice">
+             <menuitem id="test_model_menu_action"  action="estate_propertice_action"/>
+        </menuitem>
+        <menuitem id="settings" name="Settings">
+            <menuitem id="property_type"  action="estate_propery_type_action"/>
+            <menuitem id="propery_tag" action="estate_property_tag_action"/>
+<!--            <menuitem id="propery_offer" action="estate_property_offer_action"/>-->
+        </menuitem>
+    </menuitem>
+</odoo>
